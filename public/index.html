@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="https://www.youtube.com/c/qaboxletstest/playlists" target="_blank">QA BOX LET'S TEST</a>
+        <h1>Employee Inventory</h1>
+
+        <!-- Output Employees list -->
+        <ul class="item-list">
+
+        </ul>
+    </div>
+
+    <!-- Input Employees -->
+    <div class="section">
+        <form class="new-emp-form">
+            <div class="attribute">
+                <label>Department:</label>
+                <select id="department">
+                    <option value="NON-IT">Non-IT</option>
+                    <option value="IT">IT</option>
+                </select>
+            </div>
+            <div class="attribute">
+                <label>Name:</label>
+                <input type="text" id="name" minlength="6">
+            </div>
+            <div class="attribute">
+                <label>Age in Years:</label>
+                <input type="number" id="age" min="18">
+            </div>
+
+            <div class="attribute">
+                <label>Is Head?:</label>
+                <select id="departmentHead">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="attribute">
+                <label>Email:</label>
+                <input type="email" id="email" minlength="5">
+            </div>
+            <button type="submit">Add</button>
+            <button id="clear" type="button">Clear</button>
+        </form>
+    </div>
+
+    <script type="module" src='index.js'></script>
+</body>
+
+</html>
