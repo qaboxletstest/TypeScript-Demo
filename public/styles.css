@@ -1,0 +1,142 @@
+body{
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+  background-color:slategrey;
+}
+
+:root {
+  --radius: 2px;
+  --baseFg: dimgray;
+  --baseBg: white;
+  --accentFg: #006fc2;
+  --accentBg: #bae1ff;
+}
+
+.wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+}
+h1{
+  margin: 40px auto;
+  color: white;
+  text-align: center;
+}
+ul{
+  padding: 0;
+  list-style-type: none;
+  background-color:white ;
+}
+li{
+  padding: 6px 10px;
+  border: 1px dashed slategrey;
+}
+li h4{
+  color: slategrey;
+  margin: 0;
+  text-transform: capitalize;
+}
+li p{
+  color: #333;
+  margin: 8px 0 0;
+}
+div.section{
+  background: white;
+  padding: 40px;
+  padding-bottom: 50px;
+  margin-top: 60px;
+  border: 2px solid slategrey;
+  border-radius: 25px;
+}
+form{
+  margin: 0 auto;
+  text-align: center;
+}
+label{
+  display: block;
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #333;
+  margin: 16px 0 6px;
+}
+input, select{
+  padding: 6px;
+  border: 1px solid slategrey;
+  border-radius: 4px;
+}
+
+input#age{
+  width: 120px;
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+input:invalid:focus {
+  background-image: linear-gradient(pink, yellow);
+}
+
+select{
+  width: 150px;
+}
+
+select {
+  font: 400 12px/1.3 sans-serif;
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--baseFg);
+  border: 1px solid var(--baseFg);
+  line-height: 1;
+  outline: 0;
+  padding: 0.65em 2.5em 0.55em 0.75em;
+  border-radius: var(--radius);
+  background-color: var(--baseBg);
+  background-image: linear-gradient(var(--baseFg), var(--baseFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%),
+    linear-gradient(-225deg, transparent 50%, var(--accentBg) 50%),
+    linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+  background-position: right 20px center, right bottom, right bottom, right bottom;   
+}
+
+select:hover {
+  background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+}
+
+select:active {
+  background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+  color: var(--accentBg);
+  border-color: var(--accentFg);
+  background-color: var(--accentFg);
+}
+
+.attribute{
+  display: inline-block;
+  margin: 0 10px;
+}
+button{
+  color: white;
+  border: 0;
+  background: slategrey;
+  margin-top: 10px;
+  padding: 6px;
+  min-width: 70px;
+  border-radius: 4px;
+  font-weight: bolder;
+}
+.wrapper > a{
+  text-align: center;
+  display: block;
+  color: white;
+  margin-top: 40px;
+  font-size: 1.0em;
+}
+
+.wrapper > a:hover   {color:cornflowerblue;}
+.wrapper > a:active  {color:burlywood;}
