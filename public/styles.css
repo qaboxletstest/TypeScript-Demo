@@ -138,5 +138,14 @@ button{
   font-size: 1.0em;
 }
 
+<<<<<<< HEAD
 .wrapper > a:hover   {color:cornflowerblue;}
 .wrapper > a:active  {color:burlywood;}
+=======
+.wrapper > a:hover   {
+  color:cornflowerblue;
+}
+.wrapper > a:active  {
+  color:burlywood;
+}
+>>>>>>> Demo Project
