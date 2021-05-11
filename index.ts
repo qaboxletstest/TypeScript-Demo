@@ -1,23 +1,24 @@
-// Variables
+let personName = 'Avi'
+let age = 10
+let inSports = false
 
-const channelName = "QA BOX LET'S TEST"
-let age = 1
-console.log(channelName, age)
+// personName = 12
+personName = 'Tanisha'
 
-// Array (DOM)
-const fruits = ['Apple', 'Mango']
-const inputs = document.querySelectorAll('input')
+// age = 'Yoga'
+age = 5
 
-console.log(inputs)
+// inSports = 'No'
+inSports = true
 
-// Iteration
-inputs.forEach(input => {
-    console.log(input)
-})
+// Contextual Typing
 
-// Function
-const sum = (num1, num2) => {
-    return num1 + num2
+document.onmousedown = function (event) {
+    console.log(event.button)
+    // console.log(event.troy)
 }
 
-console.log(sum(1, 2))
+document.onclick = function (event) {
+    console.log(event.button)
+}
+

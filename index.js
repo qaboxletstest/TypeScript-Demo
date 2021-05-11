@@ -1,17 +1,17 @@
-// Variables
-var channelName = "QA BOX LET'S TEST";
-var age = 1;
-console.log(channelName, age);
-// Array (DOM)
-var fruits = ['Apple', 'Mango'];
-var inputs = document.querySelectorAll('input');
-console.log(inputs);
-// Iteration
-inputs.forEach(function (input) {
-    console.log(input);
-});
-// Function
-var sum = function (num1, num2) {
-    return num1 + num2;
+var personName = 'Avi';
+var age = 10;
+var inSports = false;
+// personName = 12
+personName = 'Tanisha';
+// age = 'Yoga'
+age = 5;
+// inSports = 'No'
+inSports = true;
+// Contextual Typing
+document.onmousedown = function (event) {
+    console.log(event.button);
+    // console.log(event.troy)
 };
-console.log(sum(1, 2));
+document.onclick = function (event) {
+    console.log(event.button);
+};
