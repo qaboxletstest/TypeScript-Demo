@@ -1,7 +1,7 @@
 var personName = 'Avi'; // String
 var age = 10; // Number
 var inSports = false; // Boolean
-// Will cover in much more detail in future videos
+// Will cover each of this topic in much more detail in a separate video in future
 var fruits = ['Apple', 'Mango', 'Banana']; // Array
 var mixArray = [1, true, 'Role']; // Union Type
 var person = { name: 'Avi', age: 10 }; // Object
