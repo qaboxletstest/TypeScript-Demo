@@ -1,6 +1,10 @@
-var personName = 'Avi';
-var age = 10;
-var inSports = false;
+var personName = 'Avi'; // String
+var age = 10; // Number
+var inSports = false; // Boolean
+// Will cover in much more detail in future videos
+var fruits = ['Apple', 'Mango', 'Banana']; // Array
+var person = { name: 'Avi', age: 10 }; // Object
+var rectArea = function (length, breadth) { return length * breadth; }; // Function
 // personName = 12
 personName = 'Tanisha';
 // age = 'Yoga'
