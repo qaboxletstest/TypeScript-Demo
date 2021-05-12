@@ -1,31 +1,46 @@
-let personName = 'Avi' // String
-let age = 10 // Number
-let inSports = false // Boolean
+// Arrays
+let fruits = ['Apple', 'Banana']
 
-// Will cover each of this topic in much more detail in a separate video in future
-let fruits = ['Apple', 'Mango', 'Banana'] // Array
-let mixArray = [1, true, 'Role'] // Array(Union Type)
-let person = { name: 'Avi', age: 10 } // Object
-let rectArea = (length: number, breadth: number) => length * breadth // Function
+fruits.push('Mango')
+fruits[0] = 'Kiwi'
+
+// fruits.push(true)
+// fruits.push(1)
+// fruits = 1
+// fruits = 'Development'
+
+// Emptying array still hold the data type set at the initialization
+fruits = []
+fruits.push('Mango')
+
+console.log(fruits)
+
+// Array initialized with multiple types
+let mixedArray = ['Avi', 10]
+mixedArray.push('Run')
+mixedArray.push(5)
+// mixedArray.push(true)
 
 
-// personName = 12
-personName = 'Tanisha'
-
-// age = 'Yoga'
-age = 5
-
-// inSports = 'No'
-inSports = true
-
-// Contextual Typing
-
-document.onmousedown = function (event) {
-    console.log(event.button)
-    // console.log(event.troy)
+// Objects
+let person = {
+    name: 'Avi',
+    age: 10
 }
 
-document.onclick = function (event) {
-    console.log(event.button)
+// person = 10
+
+person.name = 'Tanisha'
+// person.name = 10
+
+// person.isBoy = true
+
+person = {
+    name: 'QA BOX',
+    // name: 10,
+    age: 1
+    // onYoutTube: true
 }
+
+// person = {}
 
