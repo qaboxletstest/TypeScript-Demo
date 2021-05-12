@@ -1,22 +1,33 @@
-var personName = 'Avi'; // String
-var age = 10; // Number
-var inSports = false; // Boolean
-// Will cover each of this topic in much more detail in a separate video in future
-var fruits = ['Apple', 'Mango', 'Banana']; // Array
-var mixArray = [1, true, 'Role']; // Union Type
-var person = { name: 'Avi', age: 10 }; // Object
-var rectArea = function (length, breadth) { return length * breadth; }; // Function
-// personName = 12
-personName = 'Tanisha';
-// age = 'Yoga'
-age = 5;
-// inSports = 'No'
-inSports = true;
-// Contextual Typing
-document.onmousedown = function (event) {
-    console.log(event.button);
-    // console.log(event.troy)
+// Arrays
+var fruits = ['Apple', 'Banana'];
+fruits.push('Mango');
+fruits[0] = 'Kiwi';
+// fruits.push(true)
+// fruits.push(1)
+// fruits = 1
+// fruits = 'Development'
+// Emptying array still hold the data type set at the initialization
+fruits = [];
+fruits.push('Mango');
+console.log(fruits);
+// Array initialized with multiple types
+var mixedArray = ['Avi', 10];
+mixedArray.push('Run');
+mixedArray.push(5);
+// mixedArray.push(true)
+// Objects
+var person = {
+    name: 'Avi',
+    age: 10
 };
-document.onclick = function (event) {
-    console.log(event.button);
+// person = 10
+person.name = 'Tanisha';
+// person.name = 10
+// person.isBoy = true
+person = {
+    name: 'QA BOX',
+    // name: 10,
+    age: 1
+    // onYoutTube: true
 };
+// person = {}
