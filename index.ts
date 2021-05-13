@@ -1,46 +1,108 @@
-// Arrays
-let fruits = ['Apple', 'Banana']
+// Type Annotation - Explicit Type
 
-fruits.push('Mango')
-fruits[0] = 'Kiwi'
+// Primitive Data Types - STRING , NUMBER AND BOOLEAN
 
-// fruits.push(true)
+// Single Data Type
+let personName: string
+let age: number
+let isQA: boolean
+
+// Allowed
+personName = 'Avi'
+
+// Not Allowed
+// personName = 10
+
+// Allowed
+age = 10
+
+// Not Allowed
+// age = 'Ten'
+
+// Allowed
+isQA = false
+
+// Not Allowed
+// isQA = 'No'
+
+
+// Union Data Type
+let something: (string | number | boolean)
+
+// Allowed
+something = 'Test'
+something = 10
+something = true
+
+// Not Allowed
+// something = []
+// something = {}
+
+// Non-Primitive Data Types - ARRAY AND OBJECT
+
+// Single Data Type
+
+// Array
+let fruits: string[]
+let cars: Array<string> = []
+
+// Allowed
+fruits = ['Apple', 'Banana']
+
+// Not Allowed
 // fruits.push(1)
-// fruits = 1
-// fruits = 'Development'
 
-// Emptying array still hold the data type set at the initialization
-fruits = []
-fruits.push('Mango')
+// Object
+let anyObj: object
+let personObj: { name: string, age: number }
 
-console.log(fruits)
+// Allowed
+anyObj = { skill: 'TypeScript', isQA: false }
+anyObj = { name: 'Avi', age: 10 }
+anyObj = ['Obj1', 'Obj2']
+personObj = { name: 'Tanisha', age: 5 }
 
-// Array initialized with multiple types
-let mixedArray = ['Avi', 10]
-mixedArray.push('Run')
-mixedArray.push(5)
-// mixedArray.push(true)
+// Not Allowed
+// anyObj = 10
+// personObj = { name: 'Test' }
+// personObj = { name: 'Test' , age: 50, isQA: true}
+
+// Union Data Type
+
+// Array
+let mixedOne: (string | number | boolean)[] = []
+let mixedTwo: Array<(string | number | boolean)> = []
+
+// Allowed
+mixedTwo.push('Name')
+mixedTwo.push(10)
+mixedTwo.push(true)
+
+// Not Allowed
+// let numbers = [1,2,3]
+// mixedTwo.push(numbers)
+// mixedTwo = 10
 
 
-// Objects
-let person = {
-    name: 'Avi',
-    age: 10
-}
+// Object
+let mixedObj: object | { name: string, age: number }
+let mixedObj2: { skill: string, isQA: boolean } | { name: string, age: number }
 
-// person = 10
+// Allowed
+mixedObj = { color: 'Red' }
+mixedObj = { name: 'some name', age: 20 }
+mixedObj = { name: 'some name', age: 20, skill: 'QA', isQA: true }
+mixedObj = []
+mixedObj = {}
 
-person.name = 'Tanisha'
-// person.name = 10
+// mixedObj = 10
 
-// person.isBoy = true
 
-person = {
-    name: 'QA BOX',
-    // name: 10,
-    age: 1
-    // onYoutTube: true
-}
 
-// person = {}
+
+
+
+
+
+
 
