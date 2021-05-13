@@ -1,25 +1,33 @@
-// Arrays
+// Arrays - Collection of Single Data Type(e.g. All String, All Numbers , etc)
 let fruits = ['Apple', 'Banana']
+let numbers = [1,2,3]
 
+// Allowed
 fruits.push('Mango')
 fruits[0] = 'Kiwi'
 
+// fruits = []
+
+// Not Allowed
 // fruits.push(true)
-// fruits.push(1)
-// fruits = 1
-// fruits = 'Development'
+// fruits[0] = 1
+// fruits = 12
 
-// Emptying array still hold the data type set at the initialization
-fruits = []
-fruits.push('Mango')
 
-console.log(fruits)
-
-// Array initialized with multiple types
+// Arrays - Collection of Multiple Data Type(e.g. All String, All Numbers , etc)
 let mixedArray = ['Avi', 10]
-mixedArray.push('Run')
-mixedArray.push(5)
+
+
+// Allowed
+mixedArray.push('Test')
+mixedArray.push(20)
+mixedArray[0] = 30
+mixedArray[1] = 'Mango'
+
+// Not Allowed
+// mixedArray = 10
 // mixedArray.push(true)
+
 
 
 // Objects
@@ -28,19 +36,24 @@ let person = {
     age: 10
 }
 
-// person = 10
-
+// Allowed
 person.name = 'Tanisha'
-// person.name = 10
-
-// person.isBoy = true
+person.age = 5
 
 person = {
-    name: 'QA BOX',
-    // name: 10,
-    age: 1
-    // onYoutTube: true
+    name:'Tanisha',
+    age:5
 }
 
-// person = {}
 
+// Not Allowed
+// person.name = true
+// person.age = '5'
+
+// person = {
+//     name:'Tanisha',
+//     // age:5,
+//     // isGirl: true
+// }
+
+// person.isGirl = true
