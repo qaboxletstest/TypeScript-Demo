@@ -48,9 +48,11 @@ let cars: Array<string> = []
 
 // Allowed
 fruits = ['Apple', 'Banana']
+fruits[0] = 'Mango'
 
 // Not Allowed
 // fruits.push(1)
+// fruits[0] = 1
 
 // Object
 let anyObj: object
