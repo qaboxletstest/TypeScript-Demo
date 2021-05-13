@@ -53,6 +53,7 @@ fruits[0] = 'Mango'
 // Not Allowed
 // fruits.push(1)
 // fruits[0] = 1
+// fruits = 1
 
 // Object
 let anyObj: object
@@ -68,6 +69,8 @@ personObj = { name: 'Tanisha', age: 5 }
 // anyObj = 10
 // personObj = { name: 'Test' }
 // personObj = { name: 'Test' , age: 50, isQA: true}
+// personObj = 1
+// personObj = []
 
 // Union Data Type
 
@@ -81,6 +84,7 @@ mixedTwo.push(10)
 mixedTwo.push(true)
 
 // Not Allowed
+// mixedOne = {}
 // let numbers = [1,2,3]
 // mixedTwo.push(numbers)
 // mixedTwo = 10
