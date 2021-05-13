@@ -94,8 +94,26 @@ mixedObj = { name: 'some name', age: 20 }
 mixedObj = { name: 'some name', age: 20, skill: 'QA', isQA: true }
 mixedObj = []
 mixedObj = {}
+mixedObj2 = { name: 'some name', age: 20 }
+mixedObj2 = { skill: 'QA', isQA: true }
+mixedObj2 = {
+    name: 'some name',
+    age: 20,
+    skill: 'QA',
+    isQA: true
+}
+
+// Not Allowed
 
 // mixedObj = 10
+// mixedObj2 = { color: 'Red' }
+// mixedObj2 = {
+//     name: 'some name',
+//     yourage: 20,
+//     skill: 'QA',
+//     isQA: true
+// }
+
 
 
 
