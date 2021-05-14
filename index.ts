@@ -28,6 +28,7 @@ isQA = false
 
 // Union Data Type
 let something: (string | number | boolean)
+let nothing: string | number
 
 // Allowed
 something = 'Test'
