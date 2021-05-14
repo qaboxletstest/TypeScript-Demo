@@ -56,6 +56,11 @@ fruits[0] = 'Mango'
 // fruits[0] = 1
 // fruits = 1
 
+// In such cases only Array<T> approach would work
+class Cars extends Array<string>{
+
+}
+
 // Object
 let anyObj: object
 let personObj: { name: string, age: number }
