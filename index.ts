@@ -51,6 +51,10 @@ let cars: Array<string> = []
 fruits = ['Apple', 'Banana']
 fruits[0] = 'Mango'
 
+// Uncaught TypeError: Cannot read property 'push' of undefined
+// fruits.push('Kiwi')
+// console.log(fruits)
+
 // Not Allowed
 // fruits.push(1)
 // fruits[0] = 1
