@@ -46,6 +46,7 @@ something = true
 // Array
 let fruits: string[]
 let cars: Array<string> = []
+let numbers: Array<number> = []
 
 // Allowed
 fruits = ['Apple', 'Banana']
