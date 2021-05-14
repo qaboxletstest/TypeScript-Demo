@@ -1,92 +1,29 @@
-// Type Annotation - Explicit Type
-// Primitive Data Types - STRING , NUMBER AND BOOLEAN
-// Single Data Type
-var personName;
+// ANY
+var number = true;
+number = 10;
+number = 'Five';
+console.log(number);
 var age;
-var isQA;
-// Allowed
-personName = 'Avi';
-// Not Allowed
-// personName = 10
-// Allowed
 age = 10;
-// Not Allowed
-// age = 'Ten'
-// Allowed
-isQA = false;
-// Not Allowed
-// isQA = 'No'
-// Union Data Type
-var something;
-// Allowed
-something = 'Test';
-something = 10;
-something = true;
-// Not Allowed
-// something = []
-// something = {}
-// Non-Primitive Data Types - ARRAY AND OBJECT
-// Single Data Type
-// Array
-var fruits;
-var cars = [];
-// Allowed
-fruits = ['Apple', 'Banana'];
-fruits[0] = 'Mango';
-// Not Allowed
-// fruits.push(1)
-// fruits[0] = 1
-// fruits = 1
-// Object
-var anyObj;
-var personObj;
-// Allowed
-anyObj = { skill: 'TypeScript', isQA: false };
-anyObj = { name: 'Avi', age: 10 };
-anyObj = ['Obj1', 'Obj2'];
-personObj = { name: 'Tanisha', age: 5 };
-// Not Allowed
-// anyObj = 10
-// personObj = { name: 'Test' }
-// personObj = { name: 'Test' , age: 50, isQA: true}
-// personObj = 1
-// personObj = []
-// Union Data Type
-// Array
-var mixedOne = [];
-var mixedTwo = [];
-// Allowed
-mixedTwo.push('Name');
-mixedTwo.push(10);
-mixedTwo.push(true);
-// Not Allowed
-// mixedOne = {}
-// let numbers = [1,2,3]
-// mixedTwo.push(numbers)
-// mixedTwo = 10
-// Object
-var mixedObj;
-var mixedObj2;
-// Allowed
-mixedObj = { color: 'Red' };
-mixedObj = { name: 'some name', age: 20 };
-mixedObj = { name: 'some name', age: 20, skill: 'QA', isQA: true };
-mixedObj = [];
-mixedObj = {};
-mixedObj2 = { name: 'some name', age: 20 };
-mixedObj2 = { skill: 'QA', isQA: true };
-mixedObj2 = {
-    name: 'some name',
-    age: 20,
-    skill: 'QA',
-    isQA: true
+age = 'Ten';
+age = true;
+age = [1, 2, 3];
+age = { name: 'Any' };
+age.isAdult = true;
+console.log(age);
+var mixedArray = [];
+mixedArray.push('Text');
+mixedArray.push(10);
+mixedArray.push(true);
+console.log(mixedArray);
+var person;
+person = {
+    name: 'John',
+    age: 30
 };
-// Not Allowed
-// mixedObj = 10
-// mixedObj2 = { color: 'Red' }
-// mixedObj2 = {
-//     name: 'some name',
-//     yourage: 20,
-//     skill: 'QA',
-//     isQA: true
-// }
+console.log(person);
+person = {
+    name: 30,
+    age: 'John'
+};
+console.log(person);
