@@ -1,43 +1,60 @@
-// ANY
-
-let number: any = true
-number = 10
-number = 'Five'
-
-console.log(number)
-
-let age
-
-age = 10
-age = 'Ten'
-age = true
-age = [1, 2, 3]
-age = { name: 'Any' }
-age.isAdult = true
-
-console.log(age)
-
-
-
-let mixedArray: any[] = []
-mixedArray.push('Text')
-mixedArray.push(10)
-mixedArray.push(true)
-
-console.log(mixedArray)
-
-let person: { name: any, age: any }
-
-person = {
-    name: 'John',
-    age: 30
+enum DaysOfWeek {
+    SUNDAY,
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY
 }
 
-console.log(person)
+// enum DaysOfWeek {
+//     SUNDAY = 3,
+//     MONDAY,
+//     TUESDAY,
+//     WEDNESDAY,
+//     THURSDAY,
+//     FRIDAY,
+//     SATURDAY
+// }
 
-person = {
-    name: 30,
-    age: 'John'
+let today: DaysOfWeek
+today = DaysOfWeek.SUNDAY
+console.log(today)
+today = DaysOfWeek.SATURDAY
+console.log(today)
+
+// Numeric enums
+// SUNDAY = 0
+// MONDAY = 1
+// TUESDAY = 2
+// WEDNESDAY = 3
+// THURSDAY = 4
+// FRIDAY = 5
+// SATURDAY = 6
+
+// String ENUMS
+
+enum Colors {
+    red = "RED",
+    green = "GREEN",
+    blue = "BLUE"
 }
 
-console.log(person)
+let favColor: Colors
+// favColor = 1
+favColor = Colors.blue
+console.log(favColor)
+
+// Heterogeneous enums
+
+enum Animals {
+    lion = 1,
+    tiger = "TIGER"
+}
+
+let carnivorous: Animals
+carnivorous = Animals.lion
+console.log(carnivorous)
+carnivorous = Animals.tiger
+console.log(carnivorous)
