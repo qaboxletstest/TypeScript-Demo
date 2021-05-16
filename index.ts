@@ -1,60 +1,17 @@
-enum DaysOfWeek {
-    SUNDAY,
-    MONDAY,
-    TUESDAY,
-    WEDNESDAY,
-    THURSDAY,
-    FRIDAY,
-    SATURDAY
-}
+// Array
+// let emp = ['John', 1234]
+// emp[0] = 1234
+// emp[1] = 'John'
 
-// enum DaysOfWeek {
-//     SUNDAY = 3,
-//     MONDAY,
-//     TUESDAY,
-//     WEDNESDAY,
-//     THURSDAY,
-//     FRIDAY,
-//     SATURDAY
-// }
+// Tuple
+let emp: [string, number] = ['John', 1234]
 
-let today: DaysOfWeek
-today = DaysOfWeek.SUNDAY
-console.log(today)
-today = DaysOfWeek.SATURDAY
-console.log(today)
+console.log(emp)
 
-// Numeric enums
-// SUNDAY = 0
-// MONDAY = 1
-// TUESDAY = 2
-// WEDNESDAY = 3
-// THURSDAY = 4
-// FRIDAY = 5
-// SATURDAY = 6
+emp[0] = 'Max'
+emp[1] = 7890
 
-// String ENUMS
+// emp[0] = 1234
+// emp[1] = 'John'
 
-enum Colors {
-    red = "RED",
-    green = "GREEN",
-    blue = "BLUE"
-}
-
-let favColor: Colors
-// favColor = 1
-favColor = Colors.blue
-console.log(favColor)
-
-// Heterogeneous enums
-
-enum Animals {
-    lion = 1,
-    tiger = "TIGER"
-}
-
-let carnivorous: Animals
-carnivorous = Animals.lion
-console.log(carnivorous)
-carnivorous = Animals.tiger
-console.log(carnivorous)
+console.log(emp)
