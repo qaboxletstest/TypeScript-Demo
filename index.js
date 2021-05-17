@@ -21,6 +21,8 @@ var id = function (userID) {
 // let sum = (a: number, b: number, c?: number) => {
 //     return a + b + c
 // }
+// console.log(sum(10, 20))
+// console.log(sum(10, 20, 30))
 var sum = function (a, b, c) {
     if (c) {
         return a + b + c;
@@ -46,9 +48,6 @@ console.log(addTwo(undefined, 10, 20));
 // Type detected by return statement
 var sumOne = function (num1, num2) {
     return (num1 + num2);
-};
-var sumTwo = function (num1, num2) {
-    return (num1 + num2) + "Test";
 };
 // Explicit Type
 var isBoolean = function (bool1, bool2) {

@@ -32,6 +32,9 @@ let id = (userID: number | string) => {
 //     return a + b + c
 // }
 
+// console.log(sum(10, 20))
+// console.log(sum(10, 20, 30))
+
 let sum = (a: number, b: number, c?: number) => {
     if (c) {
         return a + b + c
@@ -62,10 +65,6 @@ console.log(addTwo(undefined, 10, 20))
 // Type detected by return statement
 let sumOne = (num1: number, num2: number) => {
     return (num1 + num2)
-}
-
-let sumTwo = (num1: number, num2: number) => {
-    return (num1 + num2) + "Test"
 }
 
 // Explicit Type
