@@ -10,3 +10,6 @@ var getPersonDetails = function (id, name) {
 var getBonus = function (person, bonus) {
     console.log(person.name + " - " + person.id + " gets " + bonus + " bonus.");
 };
+var getGratuity = function (person, gratuity) {
+    console.log(person.name + " - " + person.id + " gets " + gratuity + " bonus.");
+};

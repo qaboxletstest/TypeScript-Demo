@@ -17,6 +17,10 @@
 //     console.log(`${person.name} - ${person.id} gets ${bonus} bonus.`)
 // }
 
+// let getGratuity = (person: { name: string, id: string | number }, gratuity: number) => {
+//     console.log(`${person.name} - ${person.id} gets ${gratuity} bonus.`)
+// }
+
 type StringOrNumber = string | number
 type StringOrNumberOrBoolean = StringOrNumber | boolean
 type ObjWithNameAndID = { name: string, id: StringOrNumber }
@@ -36,4 +40,8 @@ let getPersonDetails = (id: StringOrNumber, name: string) => {
 
 let getBonus = (person: ObjWithNameAndID, bonus: number) => {
     console.log(`${person.name} - ${person.id} gets ${bonus} bonus.`)
+}
+
+let getGratuity = (person: ObjWithNameAndID, gratuity: number) => {
+    console.log(`${person.name} - ${person.id} gets ${gratuity} bonus.`)
 }
