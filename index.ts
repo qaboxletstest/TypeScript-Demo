@@ -35,6 +35,8 @@ let id = (userID: number | string) => {
 // console.log(sum(10, 20))
 // console.log(sum(10, 20, 30))
 
+// Handle Optional Parameter
+
 let sum = (a: number, b: number, c?: number) => {
     if (c) {
         return a + b + c
@@ -57,6 +59,8 @@ let addTwo = (c: number = 10, a: number, b: number) => {
     return a + b + c
 }
 
+// How to invoke this 
+
 console.log(addTwo(undefined, 10, 20))
 
 
@@ -67,7 +71,7 @@ let sumOne = (num1: number, num2: number) => {
     return (num1 + num2)
 }
 
-// Explicit Type
+// Explicit Type - Mention the return type explicitly 
 let isBoolean = (bool1: boolean, bool2: boolean): boolean => {
     return bool1 && bool2
 }
