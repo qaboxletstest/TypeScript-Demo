@@ -1,15 +1,27 @@
-// Variables
-var mixVar;
-// Array
-var mixedArrayOne;
-var mixedArrayTwo = [1, 'Two', true];
-// Function
-var getPersonDetails = function (id, name) {
-    console.log(name + " has an " + id + " id");
+// let sum: Function
+// 1. Function Signature
+var sum;
+sum = function (a, b) {
+    return a + b;
 };
-var getBonus = function (person, bonus) {
-    console.log(person.name + " - " + person.id + " gets " + bonus + " bonus.");
+sum = function (a, b, c) {
+    if (c === void 0) { c = 10; }
+    if (c) {
+        return a + b + c;
+    }
+    else {
+        return a + b;
+    }
 };
-var getGratuity = function (person, gratuity) {
-    console.log(person.name + " - " + person.id + " gets " + gratuity + " bonus.");
+var add = function (a, b, c) {
+    if (c === void 0) { c = 10; }
+    return a + b + c;
+};
+var aggregate = function (a, b, c) {
+    if (c) {
+        return a + b + c;
+    }
+    else {
+        return a + b;
+    }
 };

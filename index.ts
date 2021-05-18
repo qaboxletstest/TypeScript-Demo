@@ -1,47 +1,34 @@
-// Variables
+// let sum: Function
 
-// let mixVar: string | number
+// 1. Function Signature
 
-// // Array
-
-// let mixedArrayOne: (string | number)[]
-// let mixedArrayTwo: (string | number | boolean)[] = [1, 'Two', true]
-
-// // Function
-
-// let getPersonDetails = (id: string | number, name: string) => {
-//     console.log(`${name} has an ${id} id`)
-// }
-
-// let getBonus = (person: { name: string, id: string | number }, bonus: number) => {
-//     console.log(`${person.name} - ${person.id} gets ${bonus} bonus.`)
-// }
-
-// let getGratuity = (person: { name: string, id: string | number }, gratuity: number) => {
-//     console.log(`${person.name} - ${person.id} gets ${gratuity} bonus.`)
-// }
-
-type StringOrNumber = string | number
-type StringOrNumberOrBoolean = StringOrNumber | boolean
-type ObjWithNameAndID = { name: string, id: StringOrNumber }
-
-let mixVar: StringOrNumber
-
-// Array
-
-let mixedArrayOne: (StringOrNumber)[]
-let mixedArrayTwo: (StringOrNumberOrBoolean)[] = [1, 'Two', true]
-
-// Function
-
-let getPersonDetails = (id: StringOrNumber, name: string) => {
-    console.log(`${name} has an ${id} id`)
+let sum: (numOne: number, numTwo: number, numThree?: number) => number
+sum = (a: number, b: number) => {
+    return a + b
 }
 
-let getBonus = (person: ObjWithNameAndID, bonus: number) => {
-    console.log(`${person.name} - ${person.id} gets ${bonus} bonus.`)
+sum = (a: number, b: number, c: number = 10) => {
+    if (c) {
+        return a + b + c
+    } else {
+        return a + b
+    }
 }
 
-let getGratuity = (person: ObjWithNameAndID, gratuity: number) => {
-    console.log(`${person.name} - ${person.id} gets ${gratuity} bonus.`)
+let add = (a: number, b: number, c: number = 10): number => {
+    return a + b + c
 }
+
+// 2. Function Type
+
+type addition = (numOne: number, numTwo: number, numThree?: number) => number
+
+let aggregate: addition = (a: number, b: number, c?: number) => {
+    if (c) {
+        return a + b + c
+    } else {
+        return a + b
+    }
+}
+
+
