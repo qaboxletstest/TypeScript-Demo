@@ -20,12 +20,13 @@ var lastItem = function (arr) {
 var item1 = lastItem([1, 2, 3]);
 var item2 = lastItem(['a', 'b', 'c']);
 // FUNCTIONS - MULTIPLE GENERIC TYPE
-// function getEmployee(id: number, name: string): string {
-//     return `${name} - ${id}`
+// function getEmployee(id: number, code: string): string {
+//     return `${id} - ${code}`
 // }
-function getEmployee(id, name) {
-    return name + " - " + id;
+function getEmployee(id, code) {
+    return id + " - " + code;
 }
+getEmployee(1, 7); // number, number
 getEmployee(1, "Steve SMith"); // number, string
 getEmployee('JD01', "Jack Daniel"); // string, string
 // FUNCTIONS WITH OBJECTS

@@ -18,16 +18,17 @@ const item2 = lastItem<string>(['a', 'b', 'c'])
 
 // FUNCTIONS - MULTIPLE GENERIC TYPE
 
-// function getEmployee(id: number, name: string): string {
-//     return `${name} - ${id}`
+// function getEmployee(id: number, code: string): string {
+//     return `${id} - ${code}`
 // }
 
-function getEmployee<X, Y = string>(id: X, name: Y): string {
-    return `${name} - ${id}`
+function getEmployee<X, Y = string>(id: X, code: Y): string {
+    return `${id} - ${code}`
 }
 
+getEmployee<number, number>(1, 7); // number, number
 getEmployee<number, string>(1, "Steve SMith"); // number, string
-getEmployee<string>('JD01', "Jack Daniel"); // string, string
+getEmployee<string, string>('JD01', "Jack Daniel"); // string, string
 
 
 // FUNCTIONS WITH OBJECTS
