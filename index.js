@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 // ARRAYS - 
-var numArray;
+var numArray1;
 var numArray2;
 // FUNCTIONS - SINGLE GENERIC TYPE
 var lastItem = function (arr) {

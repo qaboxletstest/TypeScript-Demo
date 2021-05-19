@@ -2,7 +2,7 @@
 
 // ARRAYS - 
 
-let numArray: number[]
+let numArray1: number[]
 let numArray2: Array<number>
 
 type numArray = Array<number>
