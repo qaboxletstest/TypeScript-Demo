@@ -1,34 +1,123 @@
-// let sum: Function
+// Interface and Object
 
-// 1. Function Signature
+// interface IPerson {
+//     name: string,
+//     age: number,
+//     isMale: boolean,
+//     speak: () => void,
+//     print: () => string
+// }
 
-let sum: (numOne: number, numTwo: number, numThree?: number) => number
-sum = (a: number, b: number) => {
-    return a + b
-}
+// let p1: IPerson = 'Test'
 
-sum = (a: number, b: number, c: number = 10) => {
-    if (c) {
-        return a + b + c
-    } else {
-        return a + b
-    }
-}
+// let p1: IPerson = {
+//     name: 'Tanisha',
+//     age: 5,
+//     isMale: false,
+//     speak: () => { console.log('Hello') },
+//     print: function () { return `${this.name} is ${this.age} years old` }
+// }
 
-let add = (a: number, b: number, c: number = 10): number => {
-    return a + b + c
-}
+// p1.age = 6
 
-// 2. Function Type
+// console.log(p1.print())
 
-type addition = (numOne: number, numTwo: number, numThree?: number) => number
 
-let aggregate: addition = (a: number, b: number, c?: number) => {
-    if (c) {
-        return a + b + c
-    } else {
-        return a + b
-    }
-}
+// INTERFACE - OPTIONAL MEMBERS
+
+// interface IPerson {
+//     name: string,
+//     age: number,
+//     isMale?: boolean,
+//     speak?: () => void,
+//     print: () => string
+// }
+
+// let p2: IPerson = {
+//     name: 'Avi',
+//     age: 10,
+//     print: function () { return `${this.name} is ${this.age} years old` }
+// }
+
+// console.log(p2.print())
+
+// INTERFACE - READ-ONLY , UNION TYPE PROPERTIES AND EXTRA MEMBER???
+// interface IPerson {
+//     readonly name: string,
+//     age: number | string,
+//     isMale?: boolean,
+//     speak?: () => void,
+//     print: () => string
+// }
+
+// let p3: IPerson = {
+//     name: 'Avi',
+//     age: 10,
+//     print: function () { return `${this.name} is ${this.age} years old` },
+//     // hobbies : []
+// }
+
+// p3.name = "John"
+// p3.age = 'Six'
+
+// INTERFACE WITH FUNCTIONS
+
+// interface IPerson {
+//     name: string,
+//     age: number,
+//     isMale: boolean,
+//     speak: () => void,
+//     print: () => string
+// }
+
+// const getName = (person: IPerson) => {
+//     console.log(`Hey ${person.name}!!!`)
+// }
+
+
+// INTERFACE AND INHERITANCE
+
+// Single Interface Inheritance
+// interface IPerson {
+//     name: string
+// }
+
+// interface IDeveloper extends IPerson {
+//     language: string
+// }
+
+// let p4: IDeveloper = {
+//     name: 'John',
+//     language: 'TypeScript',
+//     // age: 10
+// }
+
+// // Multiple Interface Inheritance
+// interface IParent1 {
+//     num1: number
+// }
+
+// interface IParent2 {
+//     num2: number
+// }
+
+// interface IChild extends IParent1, IParent2 { }
+
+// let p5: IChild = {
+//     num1: 10,
+//     num2 :20
+// }
+
+// INTERFACE WITH CLASSES
+// interface IPerson {
+//     name: string
+// }
+
+// class Person implements IPerson {
+//     name: string;
+//     constructor(name: string) {
+//         this.name = name
+//     }
+// }
 
 
