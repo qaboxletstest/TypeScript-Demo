@@ -108,7 +108,57 @@
 //     num2 :20
 // }
 
+// Multiple interface Inheritance Issue
+
+interface IParent1 {
+    num1: number,
+    num3: number,
+    print: () => number
+}
+
+interface IParent2 {
+    num2: number
+    num3: number
+    print: () => number
+}
+
+interface IChild extends IParent1, IParent2 { }
+
+
 // INTERFACE WITH CLASSES
+
+class Animal {
+    species: string;
+    id: string = '';
+    constructor(species: string) {
+        this.species = species
+    }
+}
+class Person {
+    name: string;
+    id: string = '';
+    constructor(name: string) {
+        this.name = name
+    }
+}
+interface Job {
+    title: string;
+}
+interface Employee extends Person, Animal, Job {
+    employeeCode: string;
+}
+
+
+let employee: Employee = {
+    id: '1',
+    species: 'human',
+    name: 'Joe',
+    employeeCode: '123',
+    title: 'laborer'
+}
+
+// CLASSES WITH INTERFACE - WILL COVER IN A FUTURE VIDEO - THERE IT WOULD MAKE MORE SENSE
+
 // interface IPerson {
 //     name: string
 // }
