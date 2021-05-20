@@ -17,8 +17,13 @@ var numArray2;
 var lastItem = function (arr) {
     return arr[arr.length - 1];
 };
-var item1 = lastItem([1, 2, 3]);
-var item2 = lastItem(['a', 'b', 'c']);
+// const item1 = lastItem([1, 2, 3])
+// const item2 = lastItem(['a', 'b', 'c'])
+// let lastItem = <T>(arr: Array<T>): T => {
+//     return arr[arr.length - 1]
+// }
+// const item1 = lastItem([1, 2, 3])
+// const item2 = lastItem<string>(['a', 'b', 'c'])
 // FUNCTIONS - MULTIPLE GENERIC TYPE
 // function getEmployee(id: number, code: string): string {
 //     return `${id} - ${code}`

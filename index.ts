@@ -9,12 +9,21 @@ type numArray = Array<number>
 type strArray = Array<string>
 
 // FUNCTIONS - SINGLE GENERIC TYPE
-let lastItem = <T>(arr: Array<T>): T => {
+
+let lastItem = (arr: Array<number>) => {
     return arr[arr.length - 1]
 }
 
-const item1 = lastItem([1, 2, 3])
-const item2 = lastItem<string>(['a', 'b', 'c'])
+// const item1 = lastItem([1, 2, 3])
+// const item2 = lastItem(['a', 'b', 'c'])
+
+
+// let lastItem = <T>(arr: Array<T>): T => {
+//     return arr[arr.length - 1]
+// }
+
+// const item1 = lastItem([1, 2, 3])
+// const item2 = lastItem<string>(['a', 'b', 'c'])
 
 // FUNCTIONS - MULTIPLE GENERIC TYPE
 
