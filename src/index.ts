@@ -1,5 +1,3 @@
-// GENERICS
-
 // ARRAYS - 
 
 let numArray1: number[] = [1, 2, 3]
