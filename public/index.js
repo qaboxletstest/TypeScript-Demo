@@ -1,3 +1,4 @@
+"use strict";
 // GENERICS
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -11,36 +12,30 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 // ARRAYS - 
-var numArray1;
-var numArray2;
+var numArray1 = [1, 2, 3];
 // FUNCTIONS - SINGLE GENERIC TYPE
 var lastItem = function (arr) {
     return arr[arr.length - 1];
 };
-// const item1 = lastItem([1, 2, 3])
-// const item2 = lastItem(['a', 'b', 'c'])
-// let lastItem = <T>(arr: Array<T>): T => {
-//     return arr[arr.length - 1]
-// }
-// const item1 = lastItem([1, 2, 3])
-// const item2 = lastItem<string>(['a', 'b', 'c'])
-// FUNCTIONS - MULTIPLE GENERIC TYPE
-// function getEmployee(id: number, code: string): string {
-//     return `${id} - ${code}`
-// }
-function getEmployee(id, code) {
+var item1 = lastItem([1, 2, 3]);
+var item2 = lastItem(['a', 'b', 'c']);
+// FUNCTIONS - MULTIPLE & DEFAULT GENERIC TYPE
+var sum = function (a, b, e) {
+    // const c = 10
+    if (e) {
+        return a + b + e;
+    }
+    else {
+        return a + b;
+    }
+};
+var getEmployee = function (id, code) {
     return id + " - " + code;
-}
+};
 getEmployee(1, 7); // number, number
 getEmployee(1, "Steve SMith"); // number, string
 getEmployee('JD01', "Jack Daniel"); // string, string
 // FUNCTIONS WITH OBJECTS
-// const addFullNameProp = (obj: { firstname: string, lastname:string}) => {
-//     return {
-//         ...obj,
-//         FullName: `${obj.firstname} ${obj.lastname}`
-//     }
-// }
 var addFullNameProp = function (obj) {
     return __assign(__assign({}, obj), { FullName: obj.firstname + " " + obj.lastname });
 };
