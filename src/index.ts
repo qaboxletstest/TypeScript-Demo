@@ -71,9 +71,9 @@ class B extends A {
         this.b = b
     }
 
-    //
+    // Method Overriding 
     print() {
-        console.log('A')
+        console.log('B')
     }
 }
 

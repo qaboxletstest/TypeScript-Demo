@@ -48,9 +48,9 @@ class B extends A {
         super(a);
         this.b = b;
     }
-    //
+    // Method Overriding 
     print() {
-        console.log('A');
+        console.log('B');
     }
 }
 const b1 = new B('a', 'b');
