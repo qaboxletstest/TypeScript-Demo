@@ -71,10 +71,16 @@ class B extends A {
         this.b = b
     }
 
-    // Method Overriding 
+    // Method 
     print() {
         console.log('B')
     }
+
+    // Change the signature
+
+    // print(x: string) {
+    //     console.log('B')
+    // }
 }
 
 const b1 = new B('a', 'b')
