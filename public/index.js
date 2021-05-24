@@ -34,13 +34,10 @@ it1.name = "Steve Smith";
 it2.age = 40;
 console.log(it1, it2);
 console.log(names);
-// Inheritance - Single and Multiple And Method Overriding
+// Inheritance - Single and Multiple
 class A {
     constructor(a) {
         this.a = a;
-    }
-    print() {
-        console.log('A');
     }
 }
 class B extends A {
@@ -48,16 +45,11 @@ class B extends A {
         super(a);
         this.b = b;
     }
-    // Method 
-    print() {
-        console.log('B');
-    }
 }
 const b1 = new B('a', 'b');
 // Access Parent/Self Properties
 console.log(b1.a);
 console.log(b1.b);
-console.log(b1.print());
 console.log(b1);
 // Multi-Level - Allowed
 class C extends B {
