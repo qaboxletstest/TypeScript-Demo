@@ -55,8 +55,8 @@ console.log(b1);
 class C extends B {
 }
 // Multiple - Not Allowed
-// class D extends A, B {
-// }
+class D extends A {
+}
 const form = document.querySelector(".new-emp-form");
 const departmentElm = document.querySelector('#department');
 const nameElm = document.querySelector('#name');
