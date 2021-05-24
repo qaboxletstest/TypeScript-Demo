@@ -82,9 +82,9 @@ class C extends B {
 }
 
 // Multiple - Not Allowed
-// class D extends A, B {
+class D extends A, B {
 
-// }
+}
 
 
 
