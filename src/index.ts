@@ -52,12 +52,15 @@ console.log(it1, it2)
 
 console.log(names)
 
-// Inheritance - Single and Multiple
+// Inheritance - Single and Multiple And Method Overriding
 
 class A {
     a: string
     constructor(a: string) {
         this.a = a
+    }
+    print() {
+        console.log('A')
     }
 }
 
@@ -67,6 +70,11 @@ class B extends A {
         super(a)
         this.b = b
     }
+
+    //
+    print() {
+        console.log('A')
+    }
 }
 
 const b1 = new B('a', 'b')
@@ -74,6 +82,7 @@ const b1 = new B('a', 'b')
 // Access Parent/Self Properties
 console.log(b1.a)
 console.log(b1.b)
+console.log(b1.print())
 console.log(b1)
 
 // Multi-Level - Allowed
@@ -82,7 +91,7 @@ class C extends B {
 }
 
 // Multiple - Not Allowed
-class D extends A, B {
+class D extends A {
 
 }
 
