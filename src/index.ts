@@ -1,71 +1,38 @@
-// GENERICS
+// const h1 = document.querySelector("h1")!
+// const h1 = document.querySelector("h1")
 
-// ARRAYS - 
+// if (h1) {
+//     console.log(h1.textContent)
+// }
 
-let numArray1: number[] = [1, 2, 3]
+// console.log(h1!.textContent)
 
-type numArray = Array<number>
-type strArray = Array<string>
+// console.log(h1?.textContent)
 
-// FUNCTIONS - SINGLE GENERIC TYPE
+// const form = document.querySelector(".new-emp-form")!
+// const form = document.querySelector<HTMLFormElement>(".new-emp-form")!
+const form = document.querySelector(".new-emp-form") as HTMLFormElement
+// console.log(form.children)
+const departmentElm = document.querySelector('#department') as HTMLSelectElement
+const nameElm = document.querySelector('#name') as HTMLInputElement
+const ageElm = document.querySelector('#age') as HTMLInputElement
+const isHeadElm = document.querySelector('#departmentHead') as HTMLSelectElement
+const emailElm = document.querySelector('#email') as HTMLInputElement
+const clear = document.querySelector('#clear') as HTMLButtonElement
 
-let lastItem = <T>(arr: Array<T>) => {
-    return arr[arr.length - 1]
-}
+form.addEventListener("submit", (e: Event) => {
+    e.preventDefault()
+    console.log(
+        departmentElm.value,
+        nameElm.value,
+        ageElm.valueAsNumber,
+        isHeadElm.value,
+        emailElm.value
+    )
+    form.reset()
+})
 
-const item1 = lastItem([1, 2, 3])
-const item2 = lastItem<string>(['a', 'b', 'c'])
+// clear.addEventListener("click", () => {
+//     form.reset()
+// })
 
-// FUNCTIONS - MULTIPLE & DEFAULT GENERIC TYPE
-
-const sum = (a: number, b: number, e?: number) => {
-    // const c = 10
-    if (e) {
-        return a + b + e
-    } else {
-        return a + b
-    }
-
-}
-
-const getEmployee = <X, Y = string>(id: X, code: Y): string => {
-    return `${id} - ${code}`
-}
-
-getEmployee<number, number>(1, 7); // number, number
-getEmployee<number, string>(1, "Steve SMith"); // number, string
-getEmployee<string, string>('JD01', "Jack Daniel"); // string, string
-
-
-// FUNCTIONS WITH OBJECTS
-
-const addFullNameProp = <T extends { firstname: string, lastname: string }>(obj: T) => {
-    return {
-        ...obj,
-        FullName: `${obj.firstname} ${obj.lastname}`
-    }
-}
-
-const perOne = addFullNameProp({ firstname: 'John', lastname: "Smith", age: 32 })
-
-console.log(perOne)
-
-// INTERFACES
-
-interface IPerson<T> {
-    name: string,
-    age: number,
-    misc: T
-}
-
-let p1: IPerson<string> = {
-    name: "John",
-    age: 32,
-    misc: 'Some secret'
-}
-
-let p2: IPerson<string[]> = {
-    name: "Steve",
-    age: 45,
-    misc: ['Some', 'secret']
-}
