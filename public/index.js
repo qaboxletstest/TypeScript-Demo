@@ -1,62 +1,21 @@
-"use strict";
+import { Employee } from "./classes/Employee.js";
 // Class
-class ITDept {
-    // Constructor
-    constructor(name, age, isHead, email) {
-        this.name = name;
-        this.age = age;
-        this.isHead = isHead;
-        this.email = email;
-    }
-    // Methods
-    summary() {
-        if (this.isHead) {
-            return `${this.name} leads IT department and is ${this.age} years old. (Email - ${this.email})`;
-        }
-        else {
-            return `${this.name} works into IT department and is ${this.age} years old. (Email - ${this.email})`;
-        }
-    }
-}
 // Instantiation
-const it1 = new ITDept('John Doe', 32, true, 'john.doe@abc.xom');
-const it2 = new ITDept('Sam Doe', 35, false, 'sam.doe@abc.xom');
-console.log(it1, it2);
+const emp1 = new Employee('IT', 'John Doe', 32, true, 'john.doe@abc.xom');
+const emp2 = new Employee('Non-IT', 'Sam Doe', 35, false, 'sam.doe@abc.xom');
+console.log(emp1, emp2);
 // Access Properties and Invoke Methods
-console.log(it1.name);
-console.log(it1.summary());
+console.log(emp1.name);
+console.log(emp1.summary());
 // Custom Type
-const names = [];
-names.push(it1);
-names.push(it2);
+const employees = [];
+employees.push(emp1);
+employees.push(emp2);
 // Change Properties outside the class
-it1.name = "Steve Smith";
-it2.age = 40;
-console.log(it1, it2);
-console.log(names);
-// Inheritance - Single and Multiple
-class A {
-    constructor(a) {
-        this.a = a;
-    }
-}
-class B extends A {
-    constructor(a, b) {
-        super(a);
-        this.b = b;
-    }
-}
-const b1 = new B('a', 'b');
-// Access Parent/Self Properties
-console.log(b1.a);
-console.log(b1.b);
-console.log(b1);
-// Multi-Level - Allowed
-class C extends B {
-}
-// Multiple - Not Allowed
-class D extends A {
-}
+emp1.name = "Steve Smith";
+emp2.age = 40;
+console.log(emp1, emp2);
+console.log(employees);
 const form = document.querySelector(".new-emp-form");
 const departmentElm = document.querySelector('#department');
 const nameElm = document.querySelector('#name');

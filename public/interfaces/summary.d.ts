@@ -1,3 +1,0 @@
-interface ISummary {
-    summary: () => string;
-}
