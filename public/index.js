@@ -1,21 +1,76 @@
 import { Employee } from "./classes/Employee.js";
-// Class
-// Instantiation
-const emp1 = new Employee('IT', 'John Doe', 32, true, 'john.doe@abc.xom');
-const emp2 = new Employee('Non-IT', 'Sam Doe', 35, false, 'sam.doe@abc.xom');
-console.log(emp1, emp2);
-// Access Properties and Invoke Methods
-console.log(emp1.name);
-console.log(emp1.summary());
-// Custom Type
-const employees = [];
-employees.push(emp1);
-employees.push(emp2);
-// Change Properties outside the class
-emp1.name = "Steve Smith";
-emp2.age = 40;
-console.log(emp1, emp2);
-console.log(employees);
+import Helpers from './helpers/helpers.js';
+// Encapsulation 
+// class A {
+//     a: string
+//     b: string
+//     c: string
+//     d: string
+//     constructor(a: string, b: string, c: string, d: string) {
+//         this.a = a
+//         this.b = b
+//         this.c = c
+//         this.d = d
+//     }
+//     print(): string {
+//         return `${this.a} - ${this.b} - ${this.c} - ${this.d}`
+//     }
+// }
+class A {
+    constructor(a, b, c, d) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+    }
+    print() {
+        return `${this.a} - ${this.b} - ${this.c} - ${this.d}`;
+    }
+}
+const a1 = new A('a', 'b', 'c', 'd');
+// Access Members - public, private and read-only.
+// console.log(a1.a)
+// console.log(a1.b)
+// a1.c = 'C'
+// console.log(a1.c)
+// console.log(a1.d)
+// Inheritance, Protected Access Members and Polymorphism
+// Single Level - Allowed
+class B extends A {
+    constructor(a, b, c, d, e) {
+        super(a, b, c, d);
+        this.e = e;
+    }
+    // Polymorphism - Method Overriding
+    print() {
+        // return `${this.a} - ${this.b} - ${this.c} - ${this.d}`
+        return `${super.a} - ${super.c} - ${super.d} - ${this.e}`;
+    }
+}
+let b1 = new B('a', 'b', 'c', 'd', 'e');
+console.log(b1.a);
+console.log(b1.print()); // will print the print method of class B and not Class A
+// console.log(b1.d) // Throws error
+// Multi-Level - Allowed
+class D extends B {
+}
+// Multiple Classes - Not Allowed
+// class E extends A, B{
+// }
+// Abstract Class
+class F {
+}
+// let f1 = new F()
+class G extends F {
+}
+class H extends G {
+    greet() {
+        return "Hello world";
+    }
+}
+let h1 = new H();
+h1.greet();
+// Classes with Interface - For our mini Project The Employee Class implements ISummary Interface
 const form = document.querySelector(".new-emp-form");
 const departmentElm = document.querySelector('#department');
 const nameElm = document.querySelector('#name');
@@ -25,7 +80,11 @@ const emailElm = document.querySelector('#email');
 const clear = document.querySelector('#clear');
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(departmentElm.value, nameElm.value, ageElm.valueAsNumber, isHeadElm.value, emailElm.value);
+    let emp;
+    let values;
+    values = [departmentElm.value, nameElm.value, ageElm.valueAsNumber, Helpers.strToBol(isHeadElm.value), emailElm.value];
+    emp = new Employee(...values);
+    console.log(emp);
 });
 clear.addEventListener("click", () => {
     form.reset();

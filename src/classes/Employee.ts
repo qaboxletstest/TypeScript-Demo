@@ -1,4 +1,5 @@
-export class Employee {
+import { ISummary } from "../interfaces/summary.js"
+export class Employee implements ISummary {
     // Properties 
     department: string
     name: string

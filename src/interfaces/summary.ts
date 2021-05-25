@@ -1,3 +1,3 @@
-interface ISummary {
+export interface ISummary {
     summary: () => string
 }

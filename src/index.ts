@@ -1,34 +1,111 @@
 import { Employee } from "./classes/Employee.js"
+import Helpers from './helpers/helpers.js'
+import { ISummary } from './interfaces/summary.js'
 
-// Class
+// Encapsulation 
+
+// class A {
+//     a: string
+//     b: string
+//     c: string
+//     d: string
+
+//     constructor(a: string, b: string, c: string, d: string) {
+//         this.a = a
+//         this.b = b
+//         this.c = c
+//         this.d = d
+//     }
+
+//     print(): string {
+//         return `${this.a} - ${this.b} - ${this.c} - ${this.d}`
+//     }
+// }
+
+class A {
+    public a: string
+    private b: string
+    readonly c: string
+    protected d: string
+
+    constructor(a: string, b: string, c: string, d: string) {
+        this.a = a
+        this.b = b
+        this.c = c
+        this.d = d
+    }
+
+    print(): string {
+        return `${this.a} - ${this.b} - ${this.c} - ${this.d}`
+    }
+}
+
+const a1 = new A('a', 'b', 'c', 'd')
+
+// Access Members - public, private and read-only.
+
+// console.log(a1.a)
+// console.log(a1.b)
+// a1.c = 'C'
+// console.log(a1.c)
+// console.log(a1.d)
+
+// Inheritance, Protected Access Members and Polymorphism
+
+// Single Level - Allowed
+class B extends A {
+    e: string
+    constructor(a: string, b: string, c: string, d: string, e: string) {
+        super(a, b, c, d);
+        this.e = e
+    }
+    // Polymorphism - Method Overriding
+    print(): string {
+        // return `${this.a} - ${this.b} - ${this.c} - ${this.d}`
+        return `${super.a} - ${super.c} - ${super.d} - ${this.e}`
+    }
+}
+
+let b1 = new B('a', 'b', 'c', 'd', 'e')
 
 
+console.log(b1.a)
+console.log(b1.print()) // will print the print method of class B and not Class A
+// console.log(b1.d) // Throws error
 
-// Instantiation
+// Multi-Level - Allowed
+class D extends B {
 
-const emp1 = new Employee('IT', 'John Doe', 32, true, 'john.doe@abc.xom')
-const emp2 = new Employee('Non-IT', 'Sam Doe', 35, false, 'sam.doe@abc.xom')
+}
 
-console.log(emp1, emp2)
+// Multiple Classes - Not Allowed
+// class E extends A, B{
 
-// Access Properties and Invoke Methods
-console.log(emp1.name)
-console.log(emp1.summary())
+// }
 
-// Custom Type
 
-const employees: Employee[] = []
-employees.push(emp1)
-employees.push(emp2)
+// Abstract Class
+abstract class F {
+    abstract greet(): string
+}
 
-// Change Properties outside the class
+// let f1 = new F()
 
-emp1.name = "Steve Smith"
-emp2.age = 40
+abstract class G extends F {
 
-console.log(emp1, emp2)
+}
 
-console.log(employees)
+class H extends G {
+    greet(): string {
+        return "Hello world"
+    }
+}
+
+let h1 = new H()
+h1.greet()
+
+// Classes with Interface - For our mini Project The Employee Class implements ISummary Interface
+
 
 
 const form = document.querySelector(".new-emp-form") as HTMLFormElement
@@ -41,13 +118,11 @@ const clear = document.querySelector('#clear') as HTMLButtonElement
 
 form.addEventListener("submit", (e: Event) => {
     e.preventDefault()
-    console.log(
-        departmentElm.value,
-        nameElm.value,
-        ageElm.valueAsNumber,
-        isHeadElm.value,
-        emailElm.value
-    )
+    let emp: ISummary
+    let values: [string, string, number, boolean, string]
+    values = [departmentElm.value, nameElm.value, ageElm.valueAsNumber, Helpers.strToBol(isHeadElm.value), emailElm.value]
+    emp = new Employee(...values)
+    console.log(emp)
 })
 
 clear.addEventListener("click", () => {
