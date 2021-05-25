@@ -1,7 +1,6 @@
 import { iSummary } from '../interfaces/summary.js'
 
-export default class NonITEmployee implements iSummary {
-
+export default class Employee implements iSummary {
     constructor(
         private department: string,
         private name: string,

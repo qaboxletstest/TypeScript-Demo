@@ -1,9 +1,8 @@
 
-import ITEmployee from './classes/ITEmployee.js'
 import { ListTemplate } from './classes/ListTemplate.js'
-import NonITEmployee from './classes/NonITEmployee.js'
 import Helpers from './helpers/helpers.js'
 import { iSummary } from './interfaces/summary.js'
+import Employee from './classes/Employee.js'
 
 const form = document.querySelector('form')!
 const departmentElm = document.querySelector('#department') as HTMLSelectElement
@@ -21,11 +20,7 @@ form.addEventListener('submit', (e: Event) => {
     let type: iSummary
     let values: [string, string, number, boolean, string]
     values = [departmentElm.value, nameElm.value, ageElm.valueAsNumber, Helpers.strToBol(isHeadElm.value), emailElm.value]
-    if (departmentElm.value === 'IT') {
-        type = new ITEmployee(...values)
-    } else {
-        type = new NonITEmployee(...values)
-    }
+    type = new Employee(...values)
     list.render(type, departmentElm.value, "end")
 })
 

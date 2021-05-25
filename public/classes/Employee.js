@@ -1,4 +1,4 @@
-export default class NonITEmployee {
+export default class Employee {
     constructor(department, name, age, isHead, email) {
         this.department = department;
         this.name = name;

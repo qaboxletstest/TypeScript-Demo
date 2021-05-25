@@ -1,7 +1,6 @@
-import ITEmployee from './classes/ITEmployee.js';
 import { ListTemplate } from './classes/ListTemplate.js';
-import NonITEmployee from './classes/NonITEmployee.js';
 import Helpers from './helpers/helpers.js';
+import Employee from './classes/Employee.js';
 const form = document.querySelector('form');
 const departmentElm = document.querySelector('#department');
 const nameElm = document.querySelector('#name');
@@ -15,12 +14,7 @@ form.addEventListener('submit', (e) => {
     let type;
     let values;
     values = [departmentElm.value, nameElm.value, ageElm.valueAsNumber, Helpers.strToBol(isHeadElm.value), emailElm.value];
-    if (departmentElm.value === 'IT') {
-        type = new ITEmployee(...values);
-    }
-    else {
-        type = new NonITEmployee(...values);
-    }
+    type = new Employee(...values);
     list.render(type, departmentElm.value, "end");
 });
 const clear = document.querySelector('#clear');
