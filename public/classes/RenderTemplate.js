@@ -1,3 +1,4 @@
+import { Position } from "../helpers/position.js";
 export class RenderTemplate {
     constructor(container) {
         this.container = container;
@@ -10,7 +11,7 @@ export class RenderTemplate {
         const p = document.createElement('p');
         p.innerText = emp.summary();
         li.append(p);
-        if (pos === 'start') {
+        if (pos === Position.start) {
             this.container.prepend(li);
         }
         else {

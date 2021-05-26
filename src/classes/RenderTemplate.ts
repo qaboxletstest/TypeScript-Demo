@@ -1,9 +1,10 @@
 import { IRenderTemplate } from "../interfaces/renderTemplate.js"
 import { ISummary } from "../interfaces/summary.js"
+import { Position } from "../helpers/position.js"
 
 export class RenderTemplate implements IRenderTemplate {
     constructor(private container: HTMLUListElement) { }
-    render(emp: ISummary, title: string, pos: 'start' | 'end') {
+    render(emp: ISummary, title: string, pos: Position) {
         const li = document.createElement('li')
 
         const h4 = document.createElement('h4')
@@ -14,7 +15,7 @@ export class RenderTemplate implements IRenderTemplate {
         p.innerText = emp.summary()
         li.append(p)
 
-        if (pos === 'start') {
+        if (pos === Position.start) {
             this.container.prepend(li)
         } else {
             this.container.append(li)
