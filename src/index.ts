@@ -5,10 +5,10 @@ import { ISummary } from './interfaces/summary.js'
 // Encapsulation 
 
 // class A {
-//     a: string
-//     b: string
-//     c: string
-//     d: string
+// a: string
+// b: string
+// c: string
+// d: string
 
 //     constructor(a: string, b: string, c: string, d: string) {
 //         this.a = a
@@ -104,7 +104,23 @@ class H extends G {
 let h1 = new H()
 h1.greet()
 
-// Classes with Interface - For our mini Project The Employee Class implements ISummary Interface
+// Classes with Interface - 
+//For our mini Project - 
+// A - The Employee Class implements ISummary Interface
+// B - The Helpers Class implements IHelpers Interface
+
+interface IPerson {
+    walk: () => string
+}
+
+class Person implements IPerson {
+    walk(): string {
+        return 'Walk'
+    }
+}
+
+let per1 = new Person()
+per1.walk()
 
 
 
@@ -119,9 +135,7 @@ const clear = document.querySelector('#clear') as HTMLButtonElement
 form.addEventListener("submit", (e: Event) => {
     e.preventDefault()
     let emp: ISummary
-    let values: [string, string, number, boolean, string]
-    values = [departmentElm.value, nameElm.value, ageElm.valueAsNumber, Helpers.strToBol(isHeadElm.value), emailElm.value]
-    emp = new Employee(...values)
+    emp = new Employee(departmentElm.value, nameElm.value, ageElm.valueAsNumber, Helpers.strToBol(isHeadElm.value), emailElm.value)
     console.log(emp)
 })
 

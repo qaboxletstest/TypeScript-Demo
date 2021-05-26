@@ -2,10 +2,10 @@ import { Employee } from "./classes/Employee.js";
 import Helpers from './helpers/helpers.js';
 // Encapsulation 
 // class A {
-//     a: string
-//     b: string
-//     c: string
-//     d: string
+// a: string
+// b: string
+// c: string
+// d: string
 //     constructor(a: string, b: string, c: string, d: string) {
 //         this.a = a
 //         this.b = b
@@ -70,7 +70,13 @@ class H extends G {
 }
 let h1 = new H();
 h1.greet();
-// Classes with Interface - For our mini Project The Employee Class implements ISummary Interface
+class Person {
+    walk() {
+        return 'Walk';
+    }
+}
+let per1 = new Person();
+per1.walk();
 const form = document.querySelector(".new-emp-form");
 const departmentElm = document.querySelector('#department');
 const nameElm = document.querySelector('#name');
@@ -81,9 +87,7 @@ const clear = document.querySelector('#clear');
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     let emp;
-    let values;
-    values = [departmentElm.value, nameElm.value, ageElm.valueAsNumber, Helpers.strToBol(isHeadElm.value), emailElm.value];
-    emp = new Employee(...values);
+    emp = new Employee(departmentElm.value, nameElm.value, ageElm.valueAsNumber, Helpers.strToBol(isHeadElm.value), emailElm.value);
     console.log(emp);
 });
 clear.addEventListener("click", () => {

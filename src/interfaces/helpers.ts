@@ -1,3 +1,3 @@
 export interface IHelpers {
-    strToBol(str: string): boolean
+    strToBol: (str: string) => boolean
 }
