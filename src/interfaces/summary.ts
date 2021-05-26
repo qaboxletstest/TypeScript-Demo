@@ -1,3 +1,3 @@
-export interface iSummary {
+export interface ISummary {
     summary(): string
 }
