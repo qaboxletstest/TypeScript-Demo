@@ -20,8 +20,14 @@ let renderTemplate = new RenderTemplate(count, container)
 form.addEventListener("submit", (e: Event) => {
     e.preventDefault()
     let emp: ISummary
-    emp = new Employee(departmentElm.value, nameElm.value, ageElm.valueAsNumber, Helpers.strToBol(isHeadElm.value), emailElm.value)
-    renderTemplate.render(emp, departmentElm.value, Position.start)
+    let empValues: [string, string, number, boolean, string]
+    empValues = [departmentElm.value, nameElm.value, ageElm.valueAsNumber, Helpers.strToBol(isHeadElm.value), emailElm.value]
+    if (empValues.some(empVal => empVal === "" || Number.isNaN(empVal))) {
+        window.alert("All fields are mandatory")
+    } else {
+        emp = new Employee(...empValues)
+        renderTemplate.render(emp, departmentElm.value, Position.start)
+    }
 })
 
 clear.addEventListener("click", () => {
