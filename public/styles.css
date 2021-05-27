@@ -16,6 +16,12 @@ body{
   max-width: 960px;
   margin: 0 auto;
 }
+
+h2{
+  margin: 40px auto;
+  color: white;
+}
+
 h1{
   margin: 40px auto;
   color: white;

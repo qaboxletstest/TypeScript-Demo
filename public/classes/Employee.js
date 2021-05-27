@@ -5,6 +5,10 @@ export class Employee {
         this.age = age;
         this.isHead = isHead;
         this.email = email;
+        Employee.numOfEmp++;
+    }
+    static getEmpCount() {
+        return Employee.numOfEmp > 0 ? `Employees Count - ${Employee.numOfEmp}` : "";
     }
     summary() {
         if (this.isHead) {
@@ -15,3 +19,4 @@ export class Employee {
         }
     }
 }
+Employee.numOfEmp = 0;

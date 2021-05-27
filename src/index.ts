@@ -14,7 +14,8 @@ const emailElm = document.querySelector('#email') as HTMLInputElement
 const clear = document.querySelector('#clear') as HTMLButtonElement
 
 const container = document.querySelector("ul")!
-let renderTemplate = new RenderTemplate(container)
+const count = document.querySelector("h2")!
+let renderTemplate = new RenderTemplate(count, container)
 
 form.addEventListener("submit", (e: Event) => {
     e.preventDefault()
@@ -24,6 +25,7 @@ form.addEventListener("submit", (e: Event) => {
 })
 
 clear.addEventListener("click", () => {
+    count.innerText = ""
     container.innerHTML = ""
     form.reset()
 })

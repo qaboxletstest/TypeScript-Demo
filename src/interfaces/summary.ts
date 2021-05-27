@@ -1,3 +1,3 @@
 export interface ISummary {
-    summary(): string
+    summary: () => string
 }

@@ -1,10 +1,17 @@
 import { IRenderTemplate } from "../interfaces/renderTemplate.js"
 import { ISummary } from "../interfaces/summary.js"
 import { Position } from "../helpers/position.js"
+import { Employee } from "./Employee.js"
 
 export class RenderTemplate implements IRenderTemplate {
-    constructor(private container: HTMLUListElement) { }
+    constructor(private count: HTMLHeadingElement, private container: HTMLUListElement) { }
     render(emp: ISummary, title: string, pos: Position) {
+
+        let presentCount = Employee.getEmpCount()
+        if (presentCount) {
+            this.count.innerText = presentCount
+        }
+
         const li = document.createElement('li')
 
         const h4 = document.createElement('h4')

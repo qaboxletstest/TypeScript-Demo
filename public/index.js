@@ -10,7 +10,8 @@ const isHeadElm = document.querySelector('#departmentHead');
 const emailElm = document.querySelector('#email');
 const clear = document.querySelector('#clear');
 const container = document.querySelector("ul");
-let renderTemplate = new RenderTemplate(container);
+const count = document.querySelector("h2");
+let renderTemplate = new RenderTemplate(count, container);
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     let emp;
@@ -18,6 +19,7 @@ form.addEventListener("submit", (e) => {
     renderTemplate.render(emp, departmentElm.value, Position.start);
 });
 clear.addEventListener("click", () => {
+    count.innerText = "";
     container.innerHTML = "";
     form.reset();
 });
